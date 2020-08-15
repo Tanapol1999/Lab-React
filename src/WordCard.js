@@ -39,9 +39,7 @@ export default function WordCard(props){
                 console.log('reset, next attempt')
                 setState({...state,guess:'',attempt: state.attempt + 1})
                 alert("Incorrect, Please Try Again!!")
-            }
-                
-            
+            }   
         }
     }   
 
@@ -52,9 +50,9 @@ export default function WordCard(props){
                 {
                     state.chars.map((c, i) => <CharacterCard value={c} key={i} activationHandler = {activationHandler} attempt = {state.attempt}/>)   
                 }
-                <button onClick={()=>{ alert('The province that have a Mermaid point view?'); }}>
+                {/* <button onClick={()=>{ alert('The province that have a Mermaid point view?'); }}>
                     Hint!!
-                </button>
+                </button> */}
             </div>
 
             <div class="center">
