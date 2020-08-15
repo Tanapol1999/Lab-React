@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import CharacterCard from './CharacterCard';
 import _, { attempt } from 'lodash';
 
+var answer = "";
+
 const prepareStateFromWord = given_word => {
     let word = given_word.toUpperCase()
     let chars = _.shuffle(Array.from(word))
@@ -18,6 +20,8 @@ const prepareStateFromWord = given_word => {
 export default function WordCard(props){
 
     const [state, setState] = useState(prepareStateFromWord(props.value))
+    
+    answer = state.guess;
 
     const activationHandler = c => {
         console.log(`${c} has been activated.`)
@@ -29,7 +33,7 @@ export default function WordCard(props){
                 console.log('Yeah!')
                 setState({...state, guess: '', completed: true})
                 setState({...state,guess:'',attempt: state.attempt + 1})
-                alert("You won!! It is Songkhla.");
+                alert("You won!!");
             }else{
                 console.log('reset, next attempt')
                 setState({...state,guess:'',attempt: state.attempt + 1})
@@ -41,17 +45,18 @@ export default function WordCard(props){
     }   
 
     return(
-        <div class="center">
-            <p>
+        <div>
+            <div class="center">
                 {
                     state.chars.map((c, i) => <CharacterCard value={c} key={i} activationHandler = {activationHandler} attempt = {state.attempt}/>)   
                 }
-            </p>
-            <p>
                 <button onClick={()=>{ alert('The province that have a Mermaid point view?'); }}>
                     Hint!!
                 </button>
-            </p>
+            </div>
+            <div class="center">
+                Your Answer : {answer}
+            </div>
         </div>
     );
 }
