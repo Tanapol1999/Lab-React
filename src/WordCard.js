@@ -34,6 +34,7 @@ export default function WordCard(props){
                 setState({...state, guess: '', completed: true})
                 setState({...state,guess:'',attempt: state.attempt + 1})
                 alert("You won!!");
+                window.location.reload(false);
             }else{
                 console.log('reset, next attempt')
                 setState({...state,guess:'',attempt: state.attempt + 1})
@@ -46,6 +47,7 @@ export default function WordCard(props){
 
     return(
         <div>
+            
             <div class="center">
                 {
                     state.chars.map((c, i) => <CharacterCard value={c} key={i} activationHandler = {activationHandler} attempt = {state.attempt}/>)   
@@ -54,9 +56,11 @@ export default function WordCard(props){
                     Hint!!
                 </button>
             </div>
+
             <div class="center">
                 Your Answer : {answer}
             </div>
+
         </div>
     );
 }
