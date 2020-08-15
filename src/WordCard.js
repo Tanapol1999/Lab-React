@@ -38,14 +38,20 @@ export default function WordCard(props){
                 
             
         }
-    }
+    }   
 
     return(
-        <div>
-            {
-            state.chars.map((c, i) => 
-            <CharacterCard value={c} key={i} activationHandler = {activationHandler} attempt = {state.attempt}/>)   
-            }
+        <div class="center">
+            <p>
+                {
+                    state.chars.map((c, i) => <CharacterCard value={c} key={i} activationHandler = {activationHandler} attempt = {state.attempt}/>)   
+                }
+            </p>
+            <p>
+                <button onClick={()=>{ alert('The province that have a Mermaid point view?'); }}>
+                    Hint!!
+                </button>
+            </p>
         </div>
     );
 }

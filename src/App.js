@@ -1,9 +1,9 @@
-import CharacterCard from './CharacterCard';
 import React from 'react';
 import './App.css'
 import WordCard from './WordCard';
 
 const word = "Songkhla";
+const test = ["Bangkok", "Phuket"];
 
 function App() {
     return (
@@ -12,7 +12,6 @@ function App() {
             <WordCard value = {word}/>
            }
        </div>
-    );
-}
+    )}
 
 export default App;
