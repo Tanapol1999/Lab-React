@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'
 import WordCard from './WordCard';
-import Hintword from './Hintword';
+
 //solution 1 not work
 // const randword = ["Songkhla", "Phuket", "Bangkok"];
 // const word = randword[Math.floor(Math.random()*randword.length)];
@@ -41,12 +41,7 @@ function App() {
            {
                 <WordCard value = {word}/>
            }
-
-            <center><p><b>Hint:</b> {hintword}</p></center>
-
-           {/* <div>
-                <Hintword value = {hintword}/>
-            </div> */}
+            <div class = "font1"><b>Hint: </b> {hintword} </div>
 
         </div>
             
