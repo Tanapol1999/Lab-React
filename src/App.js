@@ -37,14 +37,15 @@ var rannum = Math.floor(Math.random() * 7);
 
 function App() {
     return (
-        <div>
-           {
-                <WordCard value = {word}/>
-           }
-            <div class = "font1"><b>Hint: </b> {hintword} </div>
+        <body>
+            <div>
+            {
+                    <WordCard value = {word}/>
+            }
+                <div class = "font1"><b>Hint: </b> {hintword} </div>
 
-        </div>
-            
+            </div>
+        </body>
 
     )}
 

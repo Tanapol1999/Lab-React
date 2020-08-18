@@ -47,7 +47,9 @@ export default function WordCard(props){
 
     return(
         <div>
-            <div class = "back_image">
+            <br></br>
+            <br></br>
+            <div class = "font0">
                 <b>Guess Province In Thailand</b>
             </div>
 
