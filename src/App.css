@@ -6,6 +6,11 @@ body{
   background-image: url(193335.jpg);
 }
 
+.textback{
+  background-color: black;
+  opacity: 0.09;
+}
+
 .font0 {
   font-family: "Lucida Console", Courier, monospace;
   font-size: 40px;
@@ -39,6 +44,13 @@ body{
   justify-content: center;
   align-items: center;
   font-style: oblique;
+}
+
+.back_card{
+  background-image: url("backcard.jpg");
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .center{

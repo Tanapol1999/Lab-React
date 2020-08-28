@@ -38,6 +38,8 @@ var rannum = Math.floor(Math.random() * 7);
 function App() {
     return (
         <body>
+            <br></br>
+            <br></br>
             <div>
             {
                     <WordCard value = {word}/>
